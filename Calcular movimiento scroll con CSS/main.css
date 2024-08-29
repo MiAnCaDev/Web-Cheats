@@ -1,0 +1,30 @@
+@property --s {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0; 
+}
+:root {
+  animation: scroll 1s linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll {to {--s: 100}}
+
+/* --- */
+body:before {
+  content: "Scroll Progress\A " counter(s) "%";
+  counter-reset: s var(--s);
+  font-size: 50px;
+  font-family: system-ui,sans-serif;
+  font-weight: 900;
+  white-space: pre;
+  text-align: center;
+  position: fixed;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+body {
+  min-height: 300vh;
+}
