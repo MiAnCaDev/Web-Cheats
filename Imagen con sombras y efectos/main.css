@@ -1,0 +1,24 @@
+html, body { display: grid }
+
+html { min-height: 100% }
+
+img {
+	place-self: center;
+	width: 48em;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	box-shadow: 
+		0 1.25em 1.5em -.25em #0004, 
+		0 .5em .625em -.375em #0004,
+		
+		3em 12em 0 -8em #4ade80, 
+		3em 13.25em 1.5em -8.25em #0002, 
+		3em 12.5em .625em -8.375em #0002,
+		
+		-10em -20em 0 -20em #16a34a, 		
+		-16em -16em 0 -16em #bbf7d0, 
+		-16em -14.25em 1.5em -16.25em #0002, 
+		-16em -15.5em .625em -16.375em #0002;
+	
+	font-size: clamp(.25em, 1.625vmin, 3em)
+}
