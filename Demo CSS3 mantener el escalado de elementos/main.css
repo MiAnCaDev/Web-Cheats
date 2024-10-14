@@ -1,0 +1,70 @@
+/* There's a lot of repetitive math and calc() here, it's raw CSS, but you can
+do some great SASS/LESS/Stylus/etc functions in order to abstract this, or
+at least using variables (i.e. grid's columns number). */
+
+/* You'll also notice that page's scroll messes up the grid's width. Not
+too sure on how to deal with this. I'll think something later. */
+
+body {
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #444;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.box {
+  flex: 1;
+  padding: 30px 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.box:last-child {
+  padding: 15px 0px 30px;
+}
+
+/* Avoid doing this! It's 4am sorry */
+.box > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top left, #f0f0f0 50%, #e0e0e0 50.2%);
+}
+
+.aspect-16-9 {
+  background-color: #e3e3e3;
+  width: 100vmin;
+  height: calc((9 * 100vmin) / 16); /* equals to 16:9 a.r. = height: 56.25vmin; */
+}
+
+.aspect-4-3 {
+  background-color: #e3e3e3;
+  width: 100vmin;
+  height: calc((3 * 100vmin) / 4); /* equals to 4:3 a.r. = height: 75vmin; */
+}
+
+/* Square! Obviously there's no reason to use calc here but you get the point! */
+.aspect-1-1 {
+  background-color: #e3e3e3;
+  width: 100vmin;
+  height: calc((1 * 100vmin) / 1); /* equals to 1:1 a.r. = height: 100vmin; */
+}
+
+.boxes-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boxes-grid .aspect-1-1 {
+  background-color: #e3e3e3;
+  width: calc((100vmin / 3));
+  height: calc(((1 * 100vmin) / 1) / 3); /* equals to 1:1 a.r. = height: 100vmin; */
+}
