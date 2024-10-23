@@ -1,0 +1,43 @@
+#todo {
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 600px;
+  border: 1px solid #ccc;
+}
+
+#todo .add-todo {
+  padding: 1em;
+  background: #eee;
+  text-align: center;
+}
+
+#todo .add-todo input {
+  min-width: 80%;
+  font-size: 1.6em;
+  vertical-align: middle;
+}
+
+#todo .add-todo button {
+  font-size: 1.3em;
+  padding: .2em;
+  vertical-align: middle;
+  margin: 0 0 0 .5em;
+}
+
+#todo .todos {
+  font-size: 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+#todo .todos li {
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+#todo .todos li:hover {
+  color: red;
+}
